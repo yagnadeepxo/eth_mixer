@@ -8,6 +8,7 @@ interface INavbarProps {
 
 const Navbar: React.FunctionComponent<INavbarProps> = ({connectMetamask, account}) => {
   return (
+    <>
     <nav className="bg-white dark:bg-[#000403] border-b border-[#94febf]">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
@@ -30,7 +31,17 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({connectMetamask, account
         </div>
     </div>
     </nav>
+    <div className="py-2 text-center text-xs font-medium bg-gray-800 text-gray-200">
+        <p className="flex items-center justify-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-8a1 1 0 11-2 0V7a1 1 0 112 0v3z" clipRule="evenodd" />
+          </svg>
+          <span>Using this mixer may violate laws of certain jurisdictions. For educational purposes only.</span>
+        </p>
+      </div>
+    </>
   );
 };
 
 export default Navbar;
+
